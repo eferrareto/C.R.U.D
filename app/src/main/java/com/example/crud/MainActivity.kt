@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
                 val dao = app.db.userDao()
 
                 // Inserindo um novo nome
-                dao.insert(Users(0,name.text.toString()))
+                //dao.insert(name.text.toString())
 
 
                 runOnUiThread{
@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
         btnData.setOnClickListener {
 
             val intent = Intent(this, RecyclerData::class.java)
-            intent.putExtra("names", "${name.text.toString()}")
+            intent.putExtra("id_name", name.text)
             startActivity(intent)
         }
 
